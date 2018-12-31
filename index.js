@@ -1,16 +1,10 @@
-//Performing a Task
-function greet(name, lastName) {
-  console.log('Hello ' + name + ' ' + lastName + '!');
-}
+// Arithmethic Operators
+let x = 10;
+let y = 3;
 
-//Calculating a value
-function square(number) {
-  return number * number;
-}
-
-let number = square(2);
-console.log(number);
-
-console.log(square(2));
-
-greet('John', 'Smith');
+console.log(x + y);
+console.log(x - y);
+console.log(x * y);
+console.log(x / y);
+console.log(x % y);
+console.log(x ** y);
