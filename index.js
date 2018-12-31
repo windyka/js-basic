@@ -1,15 +1,11 @@
-// Arithmethic Operators
-let x = 10;
+let x = 1;
 
-x++; //same as
-x = x + 1;
+// Relational Operators
+console.log(x > 0); //true
+console.log(x >= 1); //true
+console.log(x < 1); //false
+console.log(x <= 1); //true
 
-x = x + 5; //same as
-x += 5;
-
-x = x * 5; //same as
-x *= 5;
-
-x = x / 5; // same as
-x /= 5;
-//etc
+// Equality Operators
+console.log(x === 1); //true
+console.log(x !== 1); //false
