@@ -1,5 +1,9 @@
-// let x = 2 + 3 * 5;
-// console.log(x); //return 17
+let a = 10;
+let b = 20;
 
-let x = (2 + 3) * 5;
-console.log(x); //return 25
+let c = a;
+a = b;
+b = c;
+
+console.log(a); //return 20
+console.log(b); //return 10
