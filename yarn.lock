@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+bash@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/bash/-/bash-0.0.1.tgz#9ee0e7a752bc5eef168bc48719556a74548aae0c"
+  integrity sha1-nuDnp1K8Xu8Wi8SHGVVqdFSKrgw=
+
 git@^0.1.5:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/git/-/git-0.1.5.tgz#9ef62df93f851c27542143bf52d1c68b1017ca15"
