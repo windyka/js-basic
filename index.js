@@ -1,25 +1,30 @@
-//Falsy (false)
-//undefined
-//null
-//0
-//false
-//''
-//NaN
+// 1 = 00000001
+// 2 = 00000010
+// R OR = 00000011 // = 3
+// R AND = 00000000 // = 0
 
-//Anytjing that is not Falsy -> Truthy
-//Short-circuiting
+// console.log(1 | 2); //Bitwise OR // return 3
+// console.log(1 & 2); //Bitwise AND //return 0
 
-false || true; //return true
-false || 'Mosh'; //return 'Mosh'
-false || 1; //return 1
-false || 1 || 2; //return 1
+// Read, Write, Execute
+// 00000100
+// 00000010
+// 00000001
 
-// let userColor = 'red';
-// let defaultColor = 'blue';
-// let currentColor = userColor || defaultColor;
-// console.log(currentColor); //return 'red'
+const readPermission = 4;
+const writePermission = 2;
+const executePermission = 1;
 
-let userColor = null;
-let defaultColor = 'blue';
-let currentColor = userColor || defaultColor;
-console.log(currentColor); //return 'blue'
+// let myPermission = 0;
+// myPermission = myPermission | readPermission | writePermission;
+// console.log(myPermission); //return 6
+
+// let message = myPermission & readPermission ? 'yes' : 'no';
+// console.log(message); //return 'yes'
+
+let myPermission = 0;
+myPermission = myPermission | writePermission;
+console.log(myPermission); //return 2
+
+let message = myPermission & readPermission ? 'yes' : 'no';
+console.log(message); //return 'no'
