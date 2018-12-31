@@ -1,12 +1,20 @@
-//if a customer mor than 100 points,
-//they are 'gold' customer, otherwise;
-//they are 'silver'
+//Logical AND (&&)
+//Return true if both operand is true
+//Logical OR (||)
 
-// let points = 110;
-// let type = points > 100 ? 'gold' : 'silver';
+console.log(true && true);
 
-// // console.log(type); //'gold'
+// let highIncome = true;
+// let goodCreditScore = true;
+// let eligibleForLoan = highIncome && goodCreditScore;
+// console.log(eligibleForLoan);
+// console.log(true && true);
 
-// // points = 90;
+let highIncome = false;
+let goodCreditScore = false;
+let eligibleForLoan = highIncome || goodCreditScore;
+console.log('Eligible', eligibleForLoan);
 
-// console.log(type); //'silver'
+//Logical NOT (!)
+let applicationRefused = !eligibleForLoan;
+console.log('Aplication Refused', applicationRefused);
