@@ -1,12 +1,8 @@
-console.log('Hello Works!');
+let name = 'Wind';
+let age = 35;
 
-let name = 'Windy';
-console.log(name);
-
-let firstName = 'Wind';
-let lastName = 'Code';
-
-console.log(firstName, lastName);
-
-const interestRate = 0.3;
-console.log(interestRate);
+let person = {
+  name: 'Wind',
+  age: 35
+};
+console.log(person);
