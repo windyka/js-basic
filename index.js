@@ -5,4 +5,7 @@ let person = {
 //using Dot Notation
 person.name = 'John';
 
-console.log(person);
+//using Bracket Notation
+person['name'] = 'Marry';
+
+console.log(person.name);
