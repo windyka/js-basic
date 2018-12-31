@@ -1,11 +1,8 @@
-let x = 1;
+//Strict Equality (Type + Value)
+console.log(1 === 1); //true
+console.log('1' === 1); //false
 
-// Relational Operators
-console.log(x > 0); //true
-console.log(x >= 1); //true
-console.log(x < 1); //false
-console.log(x <= 1); //true
-
-// Equality Operators
-console.log(x === 1); //true
-console.log(x !== 1); //false
+//Lose Equality = only check 1 (value)
+console.log(1 == 1); //true
+console.log('1' == 1); //true
+console.log(true == 1); //true
