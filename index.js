@@ -1,27 +1,12 @@
-//increment output
-for (let i = 0; i < 5; i++) {
-  console.log('Hello World!', i);
-}
+let i = 0;
+do {
+  if (i % 2 != 0) console.log(i); //return 1, 3, 5
+  i++;
+} while (i <= 5);
 
-//modulus output odd number
-for (let i = 0; i <= 10; i++) {
-  if (i % 2 != 0) {
-    console.log(i);
-  }
-}
-
-console.log('--------------------');
-
-//modulus output even number
-for (let i = 0; i <= 10; i++) {
-  if (i % 2 === 0) {
-    console.log(i);
-  }
-}
-
-console.log('--------------------');
-
-//decrement output
-for (let i = 10; i >= 0; i--) {
-  console.log(i);
-}
+//how if the conditions is false statement?
+let x = 9;
+do {
+  if (x % 2 != 0) console.log(x); //return 9 //only this executed
+  x++; //not executed
+} while (x <= 5); //false statement never executed
