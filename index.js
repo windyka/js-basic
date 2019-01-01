@@ -1,5 +1,8 @@
-console.log(isLandScape(800, 500));
+// const output = fizzBuzz(3);
+// console.log(output);
 
-function isLandScape(width, height) {
-  return width > height;
-}
+// function fizzBuzz(input) {
+//   // console.log(input);
+// }
+
+//not yet work in my code

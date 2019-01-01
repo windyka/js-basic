@@ -7,6 +7,16 @@ bash@^0.0.1:
   resolved "https://registry.yarnpkg.com/bash/-/bash-0.0.1.tgz#9ee0e7a752bc5eef168bc48719556a74548aae0c"
   integrity sha1-nuDnp1K8Xu8Wi8SHGVVqdFSKrgw=
 
+es6@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/es6/-/es6-0.0.7.tgz#3b2851afeea60db16cf569d56066daa0f3974676"
+  integrity sha1-OyhRr+6mDbFs9WnVYGbaoPOXRnY=
+
+function@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/function/-/function-0.6.1.tgz#b4fd011f3552d2f60402703e8f698e712414bc16"
+  integrity sha1-tP0BHzVS0vYEAnA+j2mOcSQUvBY=
+
 git@^0.1.5:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/git/-/git-0.1.5.tgz#9ef62df93f851c27542143bf52d1c68b1017ca15"
