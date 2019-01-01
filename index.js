@@ -1,17 +1,18 @@
-let i = 0;
-{
-  while (i < 5) i++; //if you comment this (i++) you will got infinitely loops
-  console.log(i);
-}
+//for in
+const person = {
+  name: 'Wind',
+  age: 35
+};
 
-console.log('-------another logging------');
+// for (let key in person) console.log(key);
+// // return name, age
 
-let x = 0;
-do {
-  x++; //if you comment this (i++) you will got infinitely loops
-  console.log(x);
-} while (x < 5);
+// // using Dot Notation
+// person.name;
 
-// for (let i = 0 ; i > 0; i++)//this output return to infinitely loops
+// // using Bracket Notation
+// person['name'];
 
-// for (let i = 0; i < 10; )//this output return to infinitely loops
+for (let key in person) console.log(key, person[key]);
+// Return -> name Wind
+//        -> age 35
