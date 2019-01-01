@@ -1,6 +1,5 @@
-max = (a, b) => {
-  return a > b ? a : b;
-};
+console.log(isLandScape(800, 500));
 
-let number = max(10, 5);
-console.log(number); // return 10
+function isLandScape(width, height) {
+  return width > height;
+}
