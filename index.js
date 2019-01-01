@@ -1,20 +1,6 @@
-let i = 0;
+max = (a, b) => {
+  return a > b ? a : b;
+};
 
-// while (i <= 10) {
-//   if (i === 5) break;
-//   // if (i % 2 === 0) {
-//   //   i++;
-//   //   continue;
-//   // }
-//   console.log(i); // return 1, 2, 3, 4
-//   i++;
-// }
-
-while (i <= 10) {
-  if (i % 2 === 0) {
-    i++;
-    continue;
-  }
-  console.log(i); //return 1, 3, 5, 7, 9
-  i++;
-}
+let number = max(10, 5);
+console.log(number); // return 10
