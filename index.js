@@ -1,23 +1,20 @@
-//for in
-const person = {
-  name: 'Wind',
-  age: 35
-};
+let i = 0;
 
-// for (let key in person) console.log(key);
-// // return name, age
+// while (i <= 10) {
+//   if (i === 5) break;
+//   // if (i % 2 === 0) {
+//   //   i++;
+//   //   continue;
+//   // }
+//   console.log(i); // return 1, 2, 3, 4
+//   i++;
+// }
 
-// // using Dot Notation
-// person.name;
-
-// // using Bracket Notation
-// person['name'];
-
-for (let key in person) console.log(key, person[key]);
-// Return -> name Wind
-//        -> age 35
-
-console.log('------Line logging Separator------');
-
-let colors = ['red', 'green', 'blue'];
-for (let color of colors) console.log(color);
+while (i <= 10) {
+  if (i % 2 === 0) {
+    i++;
+    continue;
+  }
+  console.log(i); //return 1, 3, 5, 7, 9
+  i++;
+}
