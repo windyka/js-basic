@@ -1,19 +1,18 @@
-//Object-oriented Programming (OOP)
+// Factory Function
 
-let radius = 1;
-let x = 1;
-let y = 1;
+function createCircle(radius) {
+  return {
+    radius,
+    draw() {
+      console.log('draw');
+    }
+  };
+}
 
-const circle = {
-  radius: 1,
-  location: {
-    x: 1,
-    y: 1
-  },
-  isFisible: true,
-  draw: function() {
-    console.log('draw');
-  }
-};
+const circle1 = createCircle(1);
+console.log(circle1);
 
-circle.draw(); // Method
+const circle2 = createCircle(2);
+console.log(circle2);
+
+// Taking multiple Output of circles
