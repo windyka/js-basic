@@ -1,11 +1,26 @@
-// Multiples of 3: 3,6,9
-// Multiples of 5: 5,10
+const marks = [80, 80, 50];
 
-function sum(limit) {
+// 1-59 : F
+// 60-69 : D
+// 70-79 : C
+// 80-89 : B
+// 90-100 : A
+
+console.log(calculateGrade(marks));
+
+function calculateGrade(marks) {
+  const average = calculateAverage(marks);
   let sum = 0;
-  for (let i = 0; i <= limit; i++) if (i % 3 === 0 || i % 5 === 0) sum += i;
 
-  return sum;
+  if (average < 60) return 'F';
+  if (average < 70) return 'D';
+  if (average < 80) return 'C';
+  if (average < 90) return 'B';
+  return 'A';
 }
 
-console.log(sum(10));
+function calculateAverage(array) {
+  let sum = 0;
+  for (let value of array) sum += value;
+  return sum / array.length;
+}
