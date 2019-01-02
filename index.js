@@ -1,11 +1,14 @@
-const array = [0, null, undefined, '', 1, 2, 3];
+const movie = {
+  title: 'X',
+  releaseYear: 2018,
+  rating: 4.5,
+  director: 'B'
+};
 
-console.log(countTruthy(array));
+showProperty(movie);
 
-function countTruthy(array) {
-  let count = 0;
-  for (let value of array) if (value) count++;
-  return count;
+function showProperty(Object) {
+  for (let key in Object) {
+    if (typeof Object[key] === 'string') console.log(key, Object[key]);
+  }
 }
-
-// return 3
