@@ -1,22 +1,19 @@
-// Factory Function
+const circle = {
+  radius: 1
+};
 
-function createCircle(radius) {
-  return {
-    radius,
-    draw() {
-      console.log('draw');
-    }
-  };
-}
+circle.color = 'red'; //adding new property of object
+circle.draw = function() {}; //add function in object
+// return
+// {radius: 1, color: "red", draw: ƒ}
+// color: "red"
+// draw: ƒ ()
+// radius: 1
 
-const myCircle = createCircle(1);
+//remove property of an object
+delete circle.color; //deleting the color property
+delete circle.draw; //deleting the function properti of object
+console.log(circle);
 
-// Constructor Function in object
-function Circle(radius) {
-  this.radius = radius;
-  this.draw = function() {
-    console.draw('draw');
-  };
-}
-
-const circle = new Circle(1);
+//the property of an object is dynamics
+// but the variable / name / const is cannot be reasign
