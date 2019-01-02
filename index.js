@@ -9,10 +9,14 @@ function createCircle(radius) {
   };
 }
 
-const circle1 = createCircle(1);
-console.log(circle1);
+const myCircle = createCircle(1);
 
-const circle2 = createCircle(2);
-console.log(circle2);
+// Constructor Function in object
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function() {
+    console.draw('draw');
+  };
+}
 
-// Taking multiple Output of circles
+const circle = new Circle(1);
