@@ -1,19 +1,45 @@
-const circle = {
-  radius: 1
-};
+// // Factory Function
+// function createCircle(radius) {
+//   return {
+//     radius,
+//     draw: function() {
+//       console.log('draw');
+//     }
+//   };
+// }
 
-circle.color = 'red'; //adding new property of object
-circle.draw = function() {}; //add function in object
-// return
-// {radius: 1, color: "red", draw: ƒ}
-// color: "red"
-// draw: ƒ ()
-// radius: 1
+// const circle = createCircle(1);
 
-//remove property of an object
-delete circle.color; //deleting the color property
-delete circle.draw; //deleting the function properti of object
-console.log(circle);
+// //Constructor Function
+// function Circle(radius) {
+//   this.radius = radius;
+//   this.draw = function() {
+//     console.log('draw');
+//   };
+// }
 
-//the property of an object is dynamics
-// but the variable / name / const is cannot be reasign
+// const another = new Circle(1);
+
+//--------------Comment Box-------------------
+//console write;
+//> another.constructor + click enter
+//output
+// <.ƒ Circle(radius) {
+//   this.radius = radius;
+//   this.draw = function() {
+//     console.log('draw');
+//   };
+// }
+
+//console write;
+// >circle.constructor + click enter
+// output
+// ƒ Object() { [native code] }
+//------------------------------------------------
+
+let x = {};
+// let x = new Object()
+
+new String(); // '', "", ``
+new Boolean(); // true, false
+new Number(); // 1,2 3
