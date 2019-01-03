@@ -1,16 +1,3 @@
-// // Factory Function
-// function createCircle(radius) {
-//   return {
-//     radius,
-//     draw: function() {
-//       console.log('draw');
-//     }
-//   };
-// }
-
-// const circle = createCircle(1);
-
-// //Constructor Function
 // function Circle(radius) {
 //   this.radius = radius;
 //   this.draw = function() {
@@ -18,28 +5,51 @@
 //   };
 // }
 
-// const another = new Circle(1);
+// const Circle1 = new Function(
+//   'radius',
+//   `
+// this.radius = radius
+// this.draw = function(){
+//     console.log('draw')
+// }`
+// );
 
-//--------------Comment Box-------------------
-//console write;
-//> another.constructor + click enter
-//output
-// <.ƒ Circle(radius) {
+// const circle = new Circle1(1);
+
+// const another = new Circle(1);
+// //----------------------Comment Box---------------
+// //return ;
+// // console write
+// // >circle
+// // output:
+// // {radius: 1, draw: ƒ}
+// //-------------------------------------------------
+
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function() {
+    console.log('draw');
+  };
+}
+
+Circle.call({}, 1);
+// output ;
+// console write
+// ƒ Circle(radius) {
 //   this.radius = radius;
 //   this.draw = function() {
 //     console.log('draw');
 //   };
 // }
 
-//console write;
-// >circle.constructor + click enter
-// output
-// ƒ Object() { [native code] }
-//------------------------------------------------
+// Circle.apply({}, [1]);
+// output ;
+// console write
+// ƒ Circle(radius) {
+//   this.radius = radius;
+//   this.draw = function() {
+//     console.log('draw');
+//   };
+// }
 
-let x = {};
-// let x = new Object()
-
-new String(); // '', "", ``
-new Boolean(); // true, false
-new Number(); // 1,2 3
+const another = new Circle(1);
