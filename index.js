@@ -1,44 +1,36 @@
-// Difference between value types and reference types in javascript
+const circle = {
+  radius: 1,
+  draw() {
+    console.log(draw);
+  }
+};
 
-let x = 10;
-let y = x;
+for (let key in circle) console.log(key, circle[key]);
+for (let key of Object.keys(circle)) console.log(key);
+// output
+// radius 1
+// draw ƒ draw() {
+//     console.log(draw);
+//   }
+//   radius
+//   draw
 
-x = 20;
-console.log(x); // output 20
-console.log(y); // output 10
-// value(primitives) are completely independent
+for (let entry of Object.entries(circle)) console.log(entry);
+// output
+// (2) ["radius", 1]
+// 0: "radius"
+// 1: 1
+// length: 2
+// __proto__: Array(0)
+// (2) ["draw", ƒ]
+// 0: "draw"
+// 1: ƒ draw()
+// length: 2
+// __proto__: Array(0)
 
-let m = { value: 10 };
-let n = m;
+if ('radius' in circle) console.log('yes');
+// output
+// yes
 
-console.log(m.value); // output 10
-console.log(n.value); // output 10
-// reference object is copied by their reference
-// every changes is always visible by the other reference
-
-let number = 10;
-
-function increase(number) {
-  number++;
-}
-
-increase(number);
-console.log(number); // output 10
-
-let increment = 10;
-
-function adding(increment) {
-  increment++;
-  console.log(increment); // output 11
-}
-
-adding(increment);
-
-let obj = { value: 100 };
-
-function detecting(obj) {
-  obj.value++;
-}
-
-detecting(obj);
-console.log(obj); // output {value : 101}
+// Simple way to enumerate the property in an object is using for in loop, but can also for of loop along with Object.keys and Object.entries
+// and we use the in operator to see if a given property or method
