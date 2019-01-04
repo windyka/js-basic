@@ -1,55 +1,44 @@
-// function Circle(radius) {
-//   this.radius = radius;
-//   this.draw = function() {
-//     console.log('draw');
-//   };
-// }
+// Difference between value types and reference types in javascript
 
-// const Circle1 = new Function(
-//   'radius',
-//   `
-// this.radius = radius
-// this.draw = function(){
-//     console.log('draw')
-// }`
-// );
+let x = 10;
+let y = x;
 
-// const circle = new Circle1(1);
+x = 20;
+console.log(x); // output 20
+console.log(y); // output 10
+// value(primitives) are completely independent
 
-// const another = new Circle(1);
-// //----------------------Comment Box---------------
-// //return ;
-// // console write
-// // >circle
-// // output:
-// // {radius: 1, draw: ƒ}
-// //-------------------------------------------------
+let m = { value: 10 };
+let n = m;
 
-function Circle(radius) {
-  this.radius = radius;
-  this.draw = function() {
-    console.log('draw');
-  };
+console.log(m.value); // output 10
+console.log(n.value); // output 10
+// reference object is copied by their reference
+// every changes is always visible by the other reference
+
+let number = 10;
+
+function increase(number) {
+  number++;
 }
 
-Circle.call({}, 1);
-// output ;
-// console write
-// ƒ Circle(radius) {
-//   this.radius = radius;
-//   this.draw = function() {
-//     console.log('draw');
-//   };
-// }
+increase(number);
+console.log(number); // output 10
 
-// Circle.apply({}, [1]);
-// output ;
-// console write
-// ƒ Circle(radius) {
-//   this.radius = radius;
-//   this.draw = function() {
-//     console.log('draw');
-//   };
-// }
+let increment = 10;
 
-const another = new Circle(1);
+function adding(increment) {
+  increment++;
+  console.log(increment); // output 11
+}
+
+adding(increment);
+
+let obj = { value: 100 };
+
+function detecting(obj) {
+  obj.value++;
+}
+
+detecting(obj);
+console.log(obj); // output {value : 101}
