@@ -5,32 +5,29 @@ const circle = {
   }
 };
 
-for (let key in circle) console.log(key, circle[key]);
-for (let key of Object.keys(circle)) console.log(key);
-// output
-// radius 1
-// draw ƒ draw() {
-//     console.log(draw);
-//   }
-//   radius
-//   draw
+// We can cloning an object by using :
+// 1. Old Way is; -----------STEP 1------------------
+// const another = {};
+// for (let key in circle) another[key] = circle[key];
 
-for (let entry of Object.entries(circle)) console.log(entry);
+// console.log(another);
 // output
-// (2) ["radius", 1]
-// 0: "radius"
-// 1: 1
-// length: 2
-// __proto__: Array(0)
-// (2) ["draw", ƒ]
-// 0: "draw"
-// 1: ƒ draw()
-// length: 2
-// __proto__: Array(0)
+// {radius: 1, draw: ƒ}
+// draw: ƒ draw()
+// radius: 1
+// __proto__: Object
 
-if ('radius' in circle) console.log('yes');
+// by using Object.assign method :---------STEP 2--------
+
+// const another = Object.assign({ color: 'yellow' }, circle);
+// console.log(another);
 // output
-// yes
+// {color: "yellow", radius: 1, draw: ƒ}
 
-// Simple way to enumerate the property in an object is using for in loop, but can also for of loop along with Object.keys and Object.entries
-// and we use the in operator to see if a given property or method
+// by using spread operator -----------STEP 3--------------
+// to get all property of an object
+
+const another = { ...circle };
+console.log(another);
+// output
+// radius: 1, draw: ƒ}
