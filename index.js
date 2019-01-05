@@ -1,33 +1,10 @@
-const circle = {
-  radius: 1,
-  draw() {
-    console.log(draw);
-  }
-};
+// In a low level languages like on CDATASection, C++ -
+// when we create the object we need to realocate the memory, and then after done we must dealocate -
+// the memories, But it is not in a Javascript, we dont have to do this concept\
 
-// We can cloning an object by using :
-// 1. Old Way is; -----------STEP 1------------------
-// const another = {};
-// for (let key in circle) another[key] = circle[key];
+// we can directly write
+let circle = {};
+console.log(circle); // output {}
 
-// console.log(another);
-// output
-// {radius: 1, draw: ƒ}
-// draw: ƒ draw()
-// radius: 1
-// __proto__: Object
-
-// by using Object.assign method :---------STEP 2--------
-
-// const another = Object.assign({ color: 'yellow' }, circle);
-// console.log(another);
-// output
-// {color: "yellow", radius: 1, draw: ƒ}
-
-// by using spread operator -----------STEP 3--------------
-// to get all property of an object
-
-const another = { ...circle };
-console.log(another);
-// output
-// radius: 1, draw: ƒ}
+// In javascript engine has built a Garbage Collector, that collecting every constanta that no use or no longer -
+// Garbage Collector is working on the back screen, we dont need to worried because it handled by automatically
