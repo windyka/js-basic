@@ -1,23 +1,11 @@
-// Using Template Literal (ES6)
-// Using Back Tick (``) Character
+// Javascript Date
 
-const name = 'John';
-const message = `Hi ${name} ${5 + 7}
+const now = new Date();
+const date1 = new Date('Jan 6 2019 18:06');
+const date2 = new Date(2019, 0, 19, 7);
 
-This is my First message
-
-I hope you Enjoy these days!
-
-Regards
-'Wind'`;
-
-console.log(message);
-// so will output
-// Hi John 12
-
-// This is my First message
-
-// I hope you Enjoy these days!
-
-// Regards
-// 'Wind'
+// write to console
+// date1.toDateString() // output:
+// "Sun Jan 06 2019"
+// date2.toTimeString() // output:
+// "07:00:00 GMT+0700 (Western Indonesia Time)"
