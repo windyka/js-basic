@@ -1,17 +1,20 @@
-// Address Object
+// let address = createAddress('a', 'b', 'c');
+let address = new Address('a', 'b', 'c');
 
-let address = {
-  street: 'a',
-  city: 'b',
-  zipCode: 'c'
-};
-
-function showAddress(address) {
-  for (let key in address) console.log(key, address[key]);
+function createAddress(street, city, zipCode) {
+  return {
+    street,
+    city,
+    zipCode
+  };
 }
 
-showAddress(address);
+function Address(street, city, zipCode) {
+  this.street = street;
+  this.city = city;
+  this.zipCode = zipCode;
+}
+
+console.log(address);
 // output
-// street a
-// city b
-// zipCode c
+// Address {street: "a", city: "b", zipCode: "c"}
