@@ -1,30 +1,29 @@
-// Equal || Same of Objects
-let address1 = new Address('a', 'b', 'c');
-let address2 = new Address('a', 'b', 'c');
-let address3 = address1;
+// Blog Post Object
 
-function Address(street, city, zipCode) {
-  this.street = street;
-  this.city = city;
-  this.zipCode = zipCode;
-}
+// title
+// body
+// author
+// views
+// comments
+//    (author, body)
+// isLive
 
-function areEqual(address1, address2) {
-  return (
-    address1.street === address2.street &&
-    address1.city === address2.city &&
-    address1.zipCode === address2.zipCode
-  );
-}
+let post = {
+  title: 'a',
+  body: 'b',
+  author: 'c',
+  views: 1,
+  comments: [{ author: 'a', body: 'b' }, { author: 'c', body: 'c' }],
+  isLive: true
+};
 
-function areSame(address1, address2) {
-  return address1 === address2;
-}
-
-console.log(areEqual(address1, address2));
-console.log(areSame(address1, address2));
-console.log(areSame(address1, address3));
+console.log(post);
 // output
-// true
-// false
-// true
+// {title: "a", body: "b", author: "c", views: 1, comments: Array(2), …}
+// author: "c"
+// body: "b"
+// comments: (2) [{…}, {…}]
+// isLive: true
+// title: "a"
+// views: 1
+// __proto__: Object
