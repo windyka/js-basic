@@ -1,23 +1,23 @@
-// Iterating an Array --------
+// Joining Arrays
 const numbers = [1, 2, 3, 4];
+const joined = numbers.join(',');
+console.log(joined);
+// Output
+// 1,2,3,4
 
-for (let number of numbers) console.log(number);
+const message = 'This my first message';
+const parts = message.split(' ');
+console.log(parts);
 // output
-// 1
-// 2
-// 3
-// 4
+(4)[('This', 'my', 'first', 'message')];
+// 0: "This"
+// 1: "my"
+// 2: "first"
+// 3: "message"
+// length: 4
+// __proto__: Array(0)
 
-numbers.forEach(number => console.log(number));
+const combined = parts.join('-');
+console.log(combined);
 // Output
-// 1
-// 2
-// 3
-// 4
-
-numbers.forEach((number, index) => console.log(index, number));
-// Output
-// 0 1
-// 1 2
-// 2 3
-// 3 4
+// This-my-first-message
