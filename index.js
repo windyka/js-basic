@@ -1,29 +1,21 @@
-// Blog Post Object
+let post = new Post('a', 'b', 'c');
 
-// title
-// body
-// author
-// views
-// comments
-//    (author, body)
-// isLive
-
-let post = {
-  title: 'a',
-  body: 'b',
-  author: 'c',
-  views: 1,
-  comments: [{ author: 'a', body: 'b' }, { author: 'c', body: 'c' }],
-  isLive: true
-};
+function Post(title, body, author) {
+  (this.title = title),
+    (this.body = body),
+    (this.author = author),
+    (this.views = 0),
+    (this.comment = []),
+    (this.isLive = false);
+}
 
 console.log(post);
 // output
-// {title: "a", body: "b", author: "c", views: 1, comments: Array(2), …}
+// Post {title: "a", body: "b", author: "c", views: 0, comment: Array(0), …}
 // author: "c"
 // body: "b"
-// comments: (2) [{…}, {…}]
-// isLive: true
+// comment: []
+// isLive: false
 // title: "a"
-// views: 1
+// views: 0
 // __proto__: Object
