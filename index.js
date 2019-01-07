@@ -1,11 +1,26 @@
-const number = [1, 2, 3, 1, 4];
+const courses = [{ id: 1, name: 'a' }, { id: 2, name: 'b' }];
 
-console.log(number.indexOf(1, 2));
-console.log(number.lastIndexOf(1));
-console.log(number.indexOf(1) !== -1);
-console.log(number.includes(1));
+// const course = courses.find(function(course) {
+//   return course.name === 'b';
+// });
+
+// console.log(course);
+// // output
+// // {id: 2, name: "b"}
+
+// // ------------findIndex(function(element){...})------
+// const course = courses.findIndex(function(course) {
+//   return course.name === 'bcx';
+// });
+
+// console.log(course);
+// // output
+// // -1
+
+const course = courses.findIndex(function(course) {
+  return course.name === 'b';
+});
+
+console.log(course);
 // output
-// 3
-// 3
-// true
-// true
+// 1
