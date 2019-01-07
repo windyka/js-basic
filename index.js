@@ -1,21 +1,7 @@
-let post = new Post('a', 'b', 'c');
+let priceRanges = [
+  { label: '$', tooltip: 'Inexpensive', minPerPerson: 0, maxPerPerson: 10 },
+  { label: '$$', tooltip: 'Moderate', minPerPerson: 11, maxPerPerson: 20 },
+  { label: '$$$', tooltip: 'Expensive', minPerPerson: 21, maxPerPerson: 30 }
+];
 
-function Post(title, body, author) {
-  (this.title = title),
-    (this.body = body),
-    (this.author = author),
-    (this.views = 0),
-    (this.comment = []),
-    (this.isLive = false);
-}
-
-console.log(post);
-// output
-// Post {title: "a", body: "b", author: "c", views: 0, comment: Array(0), …}
-// author: "c"
-// body: "b"
-// comment: []
-// isLive: false
-// title: "a"
-// views: 0
-// __proto__: Object
+let restaurants = [{ averagePerPerson: 5 }];
