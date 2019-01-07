@@ -1,13 +1,23 @@
-// Combine and Slicing Arrays With Spread Operator
-const first = [1, 2, 3, 4];
-const second = [5, 6, 7, 8];
+// Iterating an Array --------
+const numbers = [1, 2, 3, 4];
 
-const combined = [...first, 'a', ...second, 'b'];
+for (let number of numbers) console.log(number);
+// output
+// 1
+// 2
+// 3
+// 4
 
-const copy = [...combined];
-
-console.log(combined);
-console.log(copy);
+numbers.forEach(number => console.log(number));
 // Output
-// (10) [1, 2, 3, 4, "a", 5, 6, 7, 8, "b"]
-// (10) [1, 2, 3, 4, "a", 5, 6, 7, 8, "b"]
+// 1
+// 2
+// 3
+// 4
+
+numbers.forEach((number, index) => console.log(index, number));
+// Output
+// 0 1
+// 1 2
+// 2 3
+// 3 4
