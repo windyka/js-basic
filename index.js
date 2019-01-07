@@ -1,8 +1,25 @@
-// --------------Using Arrow Function---------//
-const courses = [{ id: 1, name: 'a' }, { id: 2, name: 'b' }];
+// --------------Removing Elements---------//
+const numbers = [1, 2, 3, 4];
 
-const course = courses.findIndex(course => course.name === 'b');
+// // End
+// const last = numbers.pop();
+// console.log(numbers);
+// // Output
+// // (3) [1, 2, 3]
 
-console.log(course);
-// output
-// 1
+// // First
+// const first = numbers.shift();
+// console.log(numbers);
+// // Output
+// // (2) [2, 3]
+
+// Middle
+const middle = numbers.splice(2, 1);
+console.log(numbers);
+// Output
+// (3) [1, 2, 4]
+
+const twiceMiddle = numbers.splice(2, 3);
+console.log(numbers);
+// Output
+// (2) [1, 2]
