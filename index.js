@@ -1,25 +1,35 @@
-// --------------Removing Elements---------//
-const numbers = [1, 2, 3, 4];
+// --------------Emptying an Array---------//
+let numbers = [1, 2, 3, 4];
+let another = numbers;
 
-// // End
-// const last = numbers.pop();
+// // Solution 1 ----------------
+// numbers = [];
+
 // console.log(numbers);
 // // Output
-// // (3) [1, 2, 3]
+// // []
 
-// // First
-// const first = numbers.shift();
+// Solution 2 ----------------------
+numbers.length = 0;
+
 // console.log(numbers);
+// console.log(another);
 // // Output
-// // (2) [2, 3]
+// // []
+// // []
 
-// Middle
-const middle = numbers.splice(2, 1);
-console.log(numbers);
-// Output
-// (3) [1, 2, 4]
+// // Solution 3 ----------------
+// numbers.splice(0, numbers.length);
+// console.log(numbers);
+// console.log(another);
+// // Output
+// // []
+// // []
 
-const twiceMiddle = numbers.splice(2, 3);
+// Solution 4 ----------------------
+while (numbers.length > 0) numbers.pop();
 console.log(numbers);
+console.log(another);
 // Output
-// (2) [1, 2]
+// []
+// []
