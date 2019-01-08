@@ -1,11 +1,9 @@
-// Array from Range
+// Searching Element with Includes(function(array, target))
+const numbers = [1, 2, 3, 4];
 
-const numbers = arrayFromRange(-10, 4);
+console.log(includes(numbers, -1)); // false
 
-console.log(numbers); // (15) [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4]
-
-function arrayFromRange(min, max) {
-  const output = [];
-  for (let i = min; i <= max; i++) output.push(i);
-  return output;
+function includes(array, searchElement) {
+  for (let element of array) if (element === searchElement) return true;
+  return false;
 }
