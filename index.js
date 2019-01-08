@@ -1,18 +1,11 @@
 // Mappping an Array
 
+// Using Reduce method
+
 const numbers = [1, 2, -1, 3, 4];
 
-const items = numbers
-  .filter(n => n >= 0)
-  .map(n => ({ value: n }))
-  .filter(obj => obj.value > 1)
-  .map(obj => obj.value);
+const sum = numbers.reduce((accumulator, current) => accumulator + current);
 
-console.log(items);
+console.log(sum);
 // output
-// (3) [2, 3, 4]
-// 0: 2
-// 1: 3
-// 2: 4
-// length: 3
-// __proto__: Array(0)
+// 9
