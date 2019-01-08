@@ -1,9 +1,13 @@
 // Searching Element with Includes(function(array, target))
 const numbers = [1, 2, 3, 4];
 
-console.log(includes(numbers, -1)); // false
+const output = except(numbers, [1, 2]); // false
 
-function includes(array, searchElement) {
-  for (let element of array) if (element === searchElement) return true;
-  return false;
+console.log(output); // (2) [3, 4]
+
+function except(array, excluded) {
+  const output = [];
+  for (let element of array)
+    if (!excluded.includes(element)) output.push(element);
+  return output;
 }
