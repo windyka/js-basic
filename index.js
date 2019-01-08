@@ -1,11 +1,11 @@
-// Mappping an Array
+// Array from Range
 
-// Using Reduce method
+const numbers = arrayFromRange(-10, 4);
 
-const numbers = [1, 2, -1, 3, 4];
+console.log(numbers); // (15) [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4]
 
-const sum = numbers.reduce((accumulator, current) => accumulator + current);
-
-console.log(sum);
-// output
-// 9
+function arrayFromRange(min, max) {
+  const output = [];
+  for (let i = min; i <= max; i++) output.push(i);
+  return output;
+}
