@@ -1,19 +1,21 @@
-// Moving element
-const numbers = [1, 2, 3, 4];
+// Count occurences
+const numbers = [1, 2, 3, 4, 1];
 
-const output = move(numbers, 1, 2); // false
+const count = countOccurences(numbers, 1);
 
-console.log(output); // (4) [1, 3, 4, 2]
+console.log(count);
+// Output
+// 0 1 1
+// 1 2 1
+// 1 3 1
+// 1 4 1
+// 1 1 1
+// 2
 
-function move(array, index, offset) {
-  const position = index + offset;
-  if (position >= array.length || position < 0) {
-    console.log('Invalid offset');
-    return;
-  }
-
-  const output = [...array];
-  const element = output.splice(index, 1)[0];
-  output.splice(position, 0, element);
-  return output;
+function countOccurences(array, searchElement) {
+  return array.reduce((accumulator, current) => {
+    const occurences = current === searchElement ? 1 : 0;
+    console.log(accumulator, current, searchElement);
+    return accumulator + occurences;
+  }, 0);
 }
