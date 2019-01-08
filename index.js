@@ -1,18 +1,9 @@
-// Testing the Element of an Array
-// with .every()
-const numbers = [1, 2, 3, 4];
-const allPositive = numbers.every(value => {
-  return value >= 0;
-});
+// Filtering the Element of an Array
 
-console.log(allPositive);
+const numbers = [1, 2, -1, 3, 4];
+
+const filtered = numbers.filter(n => n >= 0);
+
+console.log(filtered);
 // output
-// true
-
-// with .some()
-const numSelected = [-1, -2, -3, -4];
-const value = numSelected.some(value => {
-  return value < 0;
-});
-
-console.log(value);
+//(4) [1, 2, 3, 4]
