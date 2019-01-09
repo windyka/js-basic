@@ -1,25 +1,7 @@
-//Difference of Function Declaration and Function Expression
-// in Function Declaration we can call the function before -
-// it definitions
+console.log(sum(1, 2, 3, 4, 5, 6, 9, 10)); // output => 40
 
-// Example
-
-walk(); // Output => walk
-function walk() {
-  console.log('walk');
+function sum() {
+  let total = 0;
+  for (let value of arguments) total += value;
+  return total;
 }
-
-//==============================
-// we cannot call Function Expressional syntax before it's definited
-
-// Example
-run(); // output => Uncaught ReferenceError: run is not defined
-
-const run = function() {
-  console.log('run');
-};
-
-const move = run;
-
-run();
-move();
