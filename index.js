@@ -1,14 +1,19 @@
-// Count occurences
-const numbers = [1, 2, 3, 4, 1];
+const movies = [
+  { title: 'a', year: 2018, rating: 4.5 },
+  { title: 'b', year: 2018, rating: 4.7 },
+  { title: 'c', year: 2018, rating: 3 },
+  { title: 'd', year: 2017, rating: 4.5 }
+];
 
-const max = getMax([1, 3, 5]);
+const titles = movies
+  .filter(m => m.year === 2018 && m.rating >= 4)
+  .sort((a, b) => a.rating - b.rating)
+  .reverse()
+  .map(m => m.title);
 
-console.log(max);
-// Output
-// 5
-
-function getMax(array) {
-  if (array.length === 0) return undefined;
-
-  return array.reduce((a, b) => (a > b ? a : b));
-}
+console.log(titles);
+// output
+// Array(2) ["b", "a"]
+// 0: "b"
+// 1: "a"
+// length: 2
