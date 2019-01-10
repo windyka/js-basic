@@ -1,45 +1,21 @@
-// Rest Operator
-function argue(args) {
-  console.log(args);
-}
-
-console.log(argue(1, 2, 3, 4, 5, 6, 9, 10));
-// output
-// (8) [1, 2, 3, 4, 5, 6, 9, 10]
-// 0: 1
-// 1: 2
-// 2: 3
-// 3: 4
-// 4: 5
-// 5: 6
-// 6: 9
-// 7: 10
-// length: 8
-// __proto__: Array(0)
-// -------------------------------------------------
-
-// sum an array with Reduce method
-// function sum(...arg) {
-//   return arg.reduce((a, b) => a + b);
+// function interest(principal, rate, years) {
+//   rate = rate || 3.5;
+//   years = years || 5;
+//   return ((principal * rate) / 100) * years;
 // }
 
-// console.log(sum(1, 2, 3, 4, 5));
-// output
-// 15
+// console.log(interest(10000)); // output => 1750
 
-// function sum(discount, ...prices) {
-//   const total = prices.reduce((a, b) => a + b);
-//   return total * (1 - discount);
+// Or using---------------------------
+// function interest(principal, rate = 3.5, years = 5) {
+//   return ((principal * rate) / 100) * years;
 // }
 
-// console.log(sum(0.1, 20, 30));
-// // output
-// // 45
-// -----------------------------------------------
+// console.log(interest(10000)); // output => 1750
 
-function sum(discount, ...prices) {
-  const total = prices.reduce((a, b) => a + b);
-  return total * (1 - discount);
+//Or using ---------------------------
+function interest(principal, rate, years) {
+  return ((principal * rate) / 100) * years;
 }
 
-console.log(sum(0.1, 20, 30)); // output => 45
+console.log(interest(10000, 3.5, 5)); // output => 1750
