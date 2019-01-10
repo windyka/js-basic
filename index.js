@@ -1,29 +1,22 @@
-const person = {
-  firstName: 'Mosh',
-  lastName: 'Hamedani',
-  get fullName() {
-    return `${person.firstName} ${person.lastName}`;
-  },
-  set fullName(value) {
-    if (typeof value !== 'string') throw new Error('Value is not a string');
+// Local vs Global Scope
 
-    const parts = value.split(' ');
-    this.firstName = parts[0];
-    this.lastName = parts[1];
-  }
-};
+// Global Scope
+// const name = 'Wind';
 
-try {
-  person.fullName = 'Windy Kurniawan';
-} catch (e) {
-  alert(e);
+// function calledName() {
+//   console.log(name); // output => Wind
+// }
+
+// calledName();
+
+// Local scope
+const name = 'Wind';
+
+function calledName() {
+  const name = 'Kurniawan';
+  console.log(name); // Output => Kurniawan
 }
 
-console.log(person);
-// {firstName: "Windy", lastName: "Kurniawan"}
-// firstName: "Windy"
-// fullName: "Windy Kurniawan"
-// lastName: "Kurniawan"
-// get fullName: ƒ fullName()
-// set fullName: ƒ fullName(value)
-// __proto__: Object
+calledName();
+
+// Local Scope are take precedence over global scope.
