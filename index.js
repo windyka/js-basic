@@ -1,21 +1,23 @@
-// function interest(principal, rate, years) {
-//   rate = rate || 3.5;
-//   years = years || 5;
-//   return ((principal * rate) / 100) * years;
-// }
+const person = {
+  firstName: 'Mosh',
+  lastName: 'Hamedani',
+  get fullName() {
+    return `${person.firstName} ${person.lastName}`;
+  },
+  set fullName(value) {
+    const parts = value.split(' ');
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  }
+};
 
-// console.log(interest(10000)); // output => 1750
+person.fullName = 'Windy Kurniawan';
 
-// Or using---------------------------
-// function interest(principal, rate = 3.5, years = 5) {
-//   return ((principal * rate) / 100) * years;
-// }
-
-// console.log(interest(10000)); // output => 1750
-
-//Or using ---------------------------
-function interest(principal, rate, years) {
-  return ((principal * rate) / 100) * years;
-}
-
-console.log(interest(10000, 3.5, 5)); // output => 1750
+console.log(person);
+// {firstName: "Windy", lastName: "Kurniawan"}
+// firstName: "Windy"
+// fullName: "Windy Kurniawan"
+// lastName: "Kurniawan"
+// get fullName: ƒ fullName()
+// set fullName: ƒ fullName(value)
+// __proto__: Object
