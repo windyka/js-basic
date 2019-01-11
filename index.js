@@ -1,10 +1,14 @@
+// Method -> obj
+// function -> global (window, global)
+
+// by Arrow Function --------------------------
 const video = {
   title: 'a',
   tags: ['a', 'b', 'c'],
   showTags() {
-    this.tags.forEach(function(tag) {
+    this.tags.forEach(tag => {
       console.log(this.title, tag);
-    }, this);
+    });
   }
 };
 
