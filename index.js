@@ -1,19 +1,7 @@
-// Method -> obj
-// function -> global (window, global)
+console.log(sum(1, 2, 3, 4)); // output => 10
 
-// by Arrow Function --------------------------
-const video = {
-  title: 'a',
-  tags: ['a', 'b', 'c'],
-  showTags() {
-    this.tags.forEach(tag => {
-      console.log(this.title, tag);
-    });
-  }
-};
+function sum(...items) {
+  if (items.length === 1 && Array.isArray(items[0])) items = [...items[0]];
 
-video.showTags();
-// output
-// a a
-// a b
-// a c
+  return items.reduce((a, b) => a + b);
+}
