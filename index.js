@@ -1,7 +1,10 @@
-console.log(sum(1, 2, 3, 4)); // output => 10
+const circle = {
+  radius: 1,
+  get area() {
+    return Math.PI * this.radius * this.radius;
+  }
+};
 
-function sum(...items) {
-  if (items.length === 1 && Array.isArray(items[0])) items = [...items[0]];
-
-  return items.reduce((a, b) => a + b);
-}
+console.log(circle.area);
+// output
+// index.js:8 => 3.141592653589793
